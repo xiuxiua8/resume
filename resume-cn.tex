@@ -1,0 +1,312 @@
+% !TEX program = xelatex
+
+\documentclass{cv}
+
+% 关闭页码显示
+\pagenumbering{gobble}
+
+% 启用中文支持
+\useChinese{Medium}{Heavy}
+\useChinese{Regular}{Bold}
+
+\begin{document}
+
+%% 基本个人信息
+\name{王子隆}
+\begin{basicinfo}
+  %\info{\email{wzilong523@gmail.com}}
+  \info{\email{zilong\_@stu.xjtu.edu.cn}}
+  \info{\phone{. }\wechat{15534516801}}
+  \info{\github{xiuxiua8}[https://github.com/xiuxiua8]}
+  \info{\linkedinsquare{zilong-wang-xiu}[www.linkedin.com/in/zilong-wang-xiu/?originalSubdomain=cn]}
+\end{basicinfo}
+
+\section{教育背景}
+\cventry{西安交通大学}
+  {2022年9月 -- 2026年6月}
+  [计算机科学与技术工学学士]
+  [西安]
+  \begin{itemize}
+    \item 成绩 84.5/100 绩点 3.46
+    \item A+课程：操作系统、算法分析与设计、数据结构、计算机系统导论、凸优化
+    %\item 部分选修课程：Math 435 抽象代数, Cmpsc 450 并发科学编程, Math 427 几何基础, Math 429 拓扑学入门, Math 437 代数几何
+  \end{itemize}
+
+\iffalse
+\section{实习经历}
+
+\cventry{奇点数据科技}
+  {2021年8月 -- 2022年7月}
+  [数据库系统研发实习生]
+  [上海]
+  \begin{itemize}
+    \item \iconlink[\faGithub][RisingWave]{https://github.com/singularity-data/risingwave}云原生流式数据库的主要贡献者之一，参与了几乎所有流计算和状态存储相关组件的开发
+    \item 设计并实现了\textbf{共享状态}以支持\textbf{流式索引}；基于共享状态实现了\textbf{查找连接执行器}以支持高效的\textbf{索引增量连接}
+    \item 带领团队调研分析性能问题并进行基准测试；通过修复bug和提出优化策略，在3个月内将系统吞吐量提升了10倍
+    \item 通过建立\textbf{开发者生态系统}显著改善了开发体验，包括\textbf{流系统仪表盘}、\textbf{开发者工具} \textit{RiseDev}和基于Terraform的\textbf{基准测试部署工具}，这些工具现已成为开发过程中不可或缺的一部分
+  \end{itemize}
+
+\fi
+
+\section{项目经历}
+
+
+
+
+
+
+
+\cventry{CS61B project}
+  {\iconlink[\faGithub][cs61b]{https://github.com/xiuxiua8/CS61B.git}}
+  [数据结构与算法]
+  []
+  \begin{itemize}
+  \item 自学UC Berkeley CS61B 课程，系统掌握链表、树、图、哈希表、并查集等及其在工程中的应用
+  \item 独立完成课程所有实验与项目，实现关键数据结构及算法，包括图算法、排序算法, 缓存优化等
+  \item 参与课程中的大型编程项目，包括构建一个迷宫求解器、优化社交网络推荐算法累积千行以上代码经验  
+  \item 通过课程的自动测评系统（Gradescope）优化代码，提高了测试覆盖率和性能，有代码格式规范意识
+  \end{itemize}
+
+
+  \cventry{Linux 内核字符设备驱动开发}
+{\iconlink[\faGithub][linux-driver]{https://github.com/xiuxiua8/os.git}}
+[操作系统]
+[]
+\begin{itemize}
+\item 学习 Linux 字符设备驱动的开发流程，基于 Linux 5.10 内核编写简单字符设备驱动
+%\item 探索用户态与内核态的通信方式，掌握内存映射（mmap）、阻塞与非阻塞 I/O 机制
+\item 通过实验理解驱动程序的同步问题，学习使用等待队列、自旋锁和信号量等技术来避免竞态条件
+\item 编写用户态测试程序，验证驱动的数据交互和性能，初步掌握 Linux 设备驱动的调试方法
+\end{itemize}
+
+  \cventry{计算机系统导论 (CSAPP)}  
+  {\iconlink[\faGithub][ics]{https://github.com/xiuxiua8/ics.git}}  
+  [计算机系统]  
+  []  
+  \begin{itemize}  
+    \item 自学 CMU CS15213 课程，深入理解计算机体系结构、缓存优化、内存管理、程序链接与安全机制
+    \item 通过严格的自动测试环境进行代码优化，掌握位运算、C 语言底层编程及性能优化技巧
+    \item 研究 ELF 可执行文件的链接与重定位，实现静态链接器，深入理解程序加载过程
+    \item 通过缓冲区溢出攻击实验，分析栈布局，利用 GDB 调试和构造输入，实现控制流劫持
+    \item 设计高效的动态内存分配器，优化分配策略，提高内存利用率和访问性能
+  \end{itemize} 
+  
+  \iffalse
+\cventry{光栅化渲染器}
+{}
+[计算机图形学]
+[]
+\begin{itemize}
+\item 参考现代图形渲染管线，基于 C++ 实现光栅化算法，顶点变换、透视除法、屏幕映射等关键过程
+\item 实现 Z-Buffer 深度测试，支持正确的像素覆盖计算，确保多个三角形的正确绘制顺序
+\item 编写基础片元着色器，学习 Blinn-Phong 光照模型，初步实现光照计算，提高场景渲染的真实感
+\item 通过实验分析不同插值方法对最终渲染效果的影响，加深对光照计算的理解
+\end{itemize}
+
+
+\cventry{支持向量机优化算法实践}
+  {\iconlink[\faGithub][svm]{https://github.com/xiuxiua8/svm.git}}
+  [凸优化]
+  []
+  \begin{itemize}
+  \item 学习支持向量机SVM的数学原理，理解其优化目标和约束条件，探索其在大规模数据集上的计算挑战
+  \item 使用 Python 实现子梯度下降法（Subgradient Descent），理解非光滑优化问题的求解方式
+  \item 研究坐标下降法（Coordinate Descent）在 SVM 训练中的应用，并通过实验分析不同优化策略对收敛速度的影响
+  \item 通过在 MNIST 数据集上的实验，比较不同优化方法的训练效率，提升对机器学习优化问题的理解
+  \end{itemize}
+
+\cventry{数据库系统（本学期课程自学）}  
+  {}  
+  [系统与数据库]  
+  []  
+  \begin{itemize}  
+    \item 自学 UC Berkeley CS186 课程，深入理解关系型数据库的内部实现与优化方法  
+    \item 探索 SQL 查询解析、查询优化 及其在数据库系统中的执行流程  
+    \item 研究 B+ 树索引、事务管理（ACID）和并发控制，掌握数据库高效存储与访问机制  
+    \item 了解 数据库恢复机制，学习 WAL 日志和故障恢复策略，提高数据库系统的可靠性  
+    \item 通过 Java 实现支持 SQL 查询的数据库系统，包括索引、事务和存储管理等核心组件  
+  \end{itemize}  
+
+
+  \fi
+\cventry{人工智能入门}  
+  {}  
+  [机器学习]  
+  []  
+  \begin{itemize}  
+    \item 自学 UC Berkeley CS188 课程，系统掌握人工智能基础，包括搜索剪枝、强化学习、概率推理
+    \item 实现A* 搜索、Alpha-Beta 剪枝等路径规划算法，优化智能体决策效率  
+    \item 研究马尔可夫决策过程（MDP）与强化学习，掌握智能体在不确定环境中的策略优化方法  
+    \item 深入理解贝叶斯网络与隐马尔可夫模型（HMM），应用于概率推理与时间序列建模  
+    \item 通过 Pac-Man AI 项目 复现搜索、强化学习等算法，加深对 AI 技术的实际应用理解  
+  \end{itemize}  
+
+  
+
+\section{竞赛经历}
+\cventry{大学生数学建模竞赛}
+{\iconlink[\faGithub][solution]{https://github.com/xiuxiua8/24_problem_B.git}}
+[数学建模]
+[获校级二等奖]
+\begin{itemize}
+
+\item 负责代码与建模，基于K-Means 聚类和卡方检验研究心理测试数据分类
+\item 设计综合评价体系，结合层次分析法（AHP）与熵值法量化测试者特征
+\item 采用t 检验与敏感性分析评估群体差异与模型稳定性
+%\item 通过比赛积累了多种数学建模方法的实战经验，提升了数据分析能力，并学会如何将理论模型与实际问题相结合，提高问题求解能力
+
+\end{itemize}
+\iffalse
+\section{校园经历}
+\cventry{西安交通大学网球协会 | 活动组织部成员}
+  {}
+  [校园活动]
+  []
+  \begin{itemize}
+  \item 协助策划并组织“新生杯”网球赛，负责选手报名、赛程安排和场地协调，吸引50+人参与
+  \item 参与组织3场校园网球推广活动，设计趣味比赛环节，帮助协会招新40+人
+  %\item 协调志愿者团队，完成比赛后勤保障工作，确保活动顺利进行
+  \end{itemize}
+\fi
+\section{开源贡献}
+
+
+\cventry{个人项目}{%\textbf{4k}关注者 
+\iconlink[\faGithub][xiuxiua8]{https://github.com/xiuxiua8}}
+\begin{itemize}
+  %\item \textbf{type-exercise-in-rust} (\faIcon[regular]{star}870):
+  %{\small 通过实现数据库系统中的表达式框架来学习Rust黑魔法（GAT、HRTB、绕过编译器bug、宏）\iconlink[\faGithub]{https://github.com/skyzh/type-exercise-in-rust}}
+
+  \item \textbf{交互式问答 iOS 应用 zuyo左右}:
+  {\small 独立开发了一款 iOS 应用 左右 ，用户可以通过滑动交互回答是/否问题，并查看社区内其他用户的选择统计。应用支持用户自主发布问题，并采用实时数据分析呈现用户选择趋势。}
+
+  \item \textbf{十二符咒}:
+  {\small 为知名游戏《以撒的结合》开发的Mod，采用Lua编写，实现了12种符咒道具，每种符咒具有特殊视觉效果与游戏机制。获得上传至Steam工坊并获得众多好评。\iconlink[\faGithub]{https://github.com/xiuxiua8/twelve-magical-talismans}}
+
+  \item \textbf{blockchainRUST}: 
+  {\small 从零开始构建的高性能区块链实现，充分利用Rust的内存安全和并发特性。包含完整的共识机制(PoW)、智能合约执行引擎、P2P网络层和加密钱包功能。针对性能瓶颈进行了深度优化，通过并行验证实现了每秒500+交易处理能力。\iconlink[\faGithub]{https://github.com/xiuxiua8/blockchainRUST.git}}
+\end{itemize}
+
+
+\section{技能证书}
+
+\begin{compactlist}
+  \item \textbf{编程语言}：熟练掌握C++、Rust、Java和Python语言
+  %\item \textbf{技术技能}：键值存储系统、SSD优化文件系统、数据库系统、流处理系统
+  \item \textbf{语言成绩}：CET-4 548分，CET-6 550分
+
+\end{compactlist}
+
+\iffalse
+
+\section{个人评价}
+
+\begin{compactlist}
+  \item 在项目中不断钻研新技术，常被团队成员评价为"学习曲线陡峭"
+  \item 多次在紧急项目中按时交付，主管曾评价"给他任务就放心"
+  \item 面对挑战时总是第一个站出来，同事笑称"有他在的项目不会失败"
+  \item "会议中最善于倾听和提出建设性意见的人"——来自上一次360度评估
+  \item 代码审查中被称为"细节捕手"，曾发现多个关键性隐藏bug
+  \item 在校期间积极参与学校以及社团活动的开展，有良好的沟通能力和团队合作精神
+  \item 经常主动帮助同学解决问题，如项目技术的选型、代码报错的处理，有较强的责任心
+  \item 对技术有浓厚的兴趣和热情，深入研究过 Spring Boot 自动配置原理的源码
+  \item 日常中经常在 Github 上学习开源项目和阅读编程优化相关书籍
+  \item 不满足于课堂所学，在校期间积极学习国外的课程,   校内外软件编程大赛或积极参于编程开源社区组织
+\end{compactlist}
+
+\fi
+\end{document}
+
+项目经历总结与优化包装
+根据你过去两年的对话记录，我整理并优化了你的项目经历，使其更符合互联网大厂的简历标准，同时突出你的技术能力和项目成果。
+
+1. 交互式问答 iOS 应用
+项目描述： 独立开发了一款 iOS 应用，用户可以通过滑动交互回答是/否问题，并查看社区内其他用户的选择统计。应用支持用户自主发布问题，并采用实时数据分析呈现用户选择趋势。
+
+技术栈： Swift, SwiftUI, Firebase（数据库 & 实时分析）
+
+核心实现：
+
+设计并实现流畅的卡片滑动交互（类似 Tinder 风格）。
+
+利用 Firebase Firestore 存储和同步用户数据，确保实时更新投票结果。
+
+设计数据分析模块，展示用户选择比例和趋势，提升互动性。
+
+项目成果：
+
+实现了从 0 到 1 的完整 iOS 应用开发，包括前端 UI 设计和后端数据交互。
+
+通过 Firebase 分析用户行为，提高用户留存和交互体验。
+
+采用 SwiftUI + Combine 优化界面响应，提升流畅度。
+
+AI工程师（实习生）
+
+
+校园招聘
+岗位意向
+本岗位有多个领域，请你选择一个具体的方向。
+
+AI软件开发
+岗位职责
+1、负责AI领域的软件工程化和产品开发；
+2、负责AI算法及系统的设计和实现，包括但不限于：神经网络与机器学习、计算机视觉、无人驾驶、路径规划、智能决策、推荐系统、大模型、生成式AI等；
+3、负责产品的集成和调测，以及各类工具链的开发；
+4、负责对外洞察AI领域最新趋势，包括但不限于：大模型、生成式AI、AI for coding等。
+
+岗位要求
+1、计算机或人工智能相关专业，具备一个及以上大型实际软件项目经验，独立承担过关键子模块的开发工作；
+2、熟练运用至少一门编程语言（C++ /Java /Python/Rust等）；
+3、熟悉Tensorflow/scikit-learn/xgboost/Caffe/MindSpore/pytorch等主流深度学习框架的使用，具备AI算法开发及应用经验者优先；
+4、深入理解计算机系统架构与操作系统，熟练掌握异构计算平台原理和典型硬件加速器的使用方法，熟练运用并发编程和底层调试，熟悉Linux/ROS；
+5、熟悉深度神经网络、计算机视觉、机器人导航定位、运动规划、机器学习算法和知识图谱等的至少一种，能够针对算法特点与芯片硬件特点设计最佳算法实现方式并优化部署或者有数据分析、挖掘、建模等方面的背景；
+6、了解编程规范/惯用法/设计模式，掌握OOD/业界常用框架优先。
+
+软件开发工程师
+
+
+校园招聘
+岗位意向
+本岗位有多个领域，请你选择一个具体的方向。
+
+通用软件开发工程师
+岗位职责
+1、负责产品/平台的软件需求分析、架构设计、代码开发、单元测试、集成测试、静态检查、本地构成、测试环境搭建、问题定位、资料开发等工作；
+2、负责相关系统/模块的代码看护及重构，持续优化提升代码质量；
+3、负责后端故障诊断和项目支持技术活动，包括产品维护、疑难问题解决、重大项目支撑等。
+
+岗位要求
+1、计算机、软件、通信等相关专业；
+2、热爱编程，基础扎实，熟悉掌握但不限于JAVA/C++/C/Python/JS/HTML/GO/Rust等编程语言中的一种或数种，有良好的编程习惯；
+3、具备独立工作能力和解决问题的能力、善于沟通，乐于合作，热衷新技术，善于总结分享，喜欢动手实践；
+4、对数据结构、算法有一定了解；
+5、优选条件：
+1）熟悉TCP/IP协议及互联网常见应用和协议的原理；
+2）有IT应用软件、互联网软件、IOS/安卓等相关产品开发经验，不满足于课堂所学，在校期间积极参加校内外软件编程大赛或积极参于编程开源社区组织；
+3）熟悉JS/AS/AJAX/HTML5/CSS等前端开发技术。
+
+
+
+算法工程师（实习生）
+
+
+校园招聘
+岗位意向
+本岗位有多个领域，请你选择一个具体的方向。
+
+软件算法
+岗位职责
+1、负责对单点算法特性或算法模块进行设计、优化，承担产品算法开发及验证工作；
+2、面向IP城域/骨干、DCN、园区网络、网络安全等领域，研究网络相关场景的机器学习算法、数据挖掘、深度学习、NLP等算法的研究和设计，使能网络智能化；
+3、主导IGP、BGP、SRv6、VPN等网络协议软件开发实现和AI for Network、网络自动驾驶等业务的创新算法设计实现，支撑IPv6+国家战略和5.5G战略，实现全球领先；
+4、紧跟业界相关领域的技术发展趋势，提出新的技术思路，实现技术创新性领先。
+
+岗位要求
+1、具备人工智能AI算法、大数据算法、数据结构算法设计和开发能力；
+2、具备前沿人工智能技术跟踪和业界趋势的跟踪和算法应用能力；
+3、至少掌握Java/Python/C/Rust其中一种开发语言，掌握Hadoop开源工具使用更佳；
+4、至少掌握一种数据挖掘工具和深度模型训练工具，如Tensorflow、caffe、matlab；
+5、具备较强的动手实践能力，能够快速把想法用算法程序的实现；
+6、具备挑战不可能的精神和创新意识，主动担责，攻坚破难；
+7、具备良好的团队合作精神，善于沟通。

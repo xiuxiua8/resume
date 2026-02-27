@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{chicv}[2022/08/21 A CV template based on the Curriculum Vitae of Alex Chi Zhang]
+\ProvidesClass{cv}[2025/03/28 A CV template based on the Curriculum Vitae of Alex Chi Zhang]
 \LoadClass[10pt]{article} % based on article class
 
 %
@@ -252,6 +252,12 @@
         \hspace{-12pt}\underline{\href{#3}{\icon\ #2}}
     }
     \hspace{-8pt}
+}
+
+% defines one's WeChat
+% usage: \wechat{<wechat-id>}
+\NewDocumentCommand{\wechat}{ m }{
+    \faWeixin\ {#1}\hspace{-14pt}
 }
 
 % Set up pagestyle
